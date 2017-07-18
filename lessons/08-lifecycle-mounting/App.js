@@ -13,9 +13,10 @@ class App extends React.Component {
     this.setState({val: this.state.val + 1 })
   }
   componentWillMount(){
+    //This process only is executed one time before the first render
     console.log('componentWillMount')
   }
-  render(){
+  render(){//this process is executed several times after each click
     console.log('render')
     return <button onClick={this.update}>{this.state.val}</button>
   }
@@ -23,6 +24,7 @@ class App extends React.Component {
     console.log('componentDidMount')
   }
   componentWillUnmount(){
+    //This process execute after render an only one time
     console.log('componentWillUnmount')
   }
 }
@@ -37,6 +39,10 @@ class Wrapper extends React.Component {
   unmount(){
     ReactDOM.unmountComponentAtNode(document.getElementById('a'))
   }
+  /**
+   * The first button create a new app component 
+   * the second button unmount appcomponent
+   */
   render(){
     return (
         <div>
