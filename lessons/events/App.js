@@ -1,12 +1,17 @@
+//vIDEO 9
+//Normalize Events with Reacts Synthetic Event System
 import React from 'react';
 
 class App extends React.Component {
   constructor(){
     super();
     this.state = {currentEvent: '---'}
+    //I think this way is better assing bind into a update and then when we need call update.bind
+    //we only need call this.update
     this.update = this.update.bind(this)
   }
   update(e){
+    //check all events in textarea
     this.setState({currentEvent: e.type})
   }
   render(){

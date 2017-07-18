@@ -1,5 +1,4 @@
-// https://jsbin.com/cumopab/edit?js,output
-
+//Video 7
 import React from 'react';
 
 class App extends React.Component {

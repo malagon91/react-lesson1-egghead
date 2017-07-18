@@ -1,0 +1,32 @@
+Primer avistamiento reactJS
+
+Notas 
+
+Primera linea para descarga la libreria 
+npm create-react-app -g
+con esta linea descargo un temporal de react en npm
+
+
+Crea el folder de la aplicacion
+create-react-app (react-app) Nombre de la app
+con esta copio lo que creo a la carpeta que le indique
+
+
+cd react-app
+
+npm start Lanza la app
+
+Al final de cada componente debe ir el export de lo que se va exportar 
+
+
+A diferencia de los accesorios, que son una colección de valores que están destinados a ser pasados
+ a nuestro componente como valor estático, 
+ no está destinado a ser modificado por nuestro componente.
+  Estado representa una colección de valores que se pretende administrar, así como actualizada por
+   nuestro componente.
+Para empezar a usar el estado, voy a configurar un método constructor aquí, y lo primero que voy a hacer es, voy a llamar a super (). Esto va a dar a la palabra clave este el contexto dentro de nuestro componente, en lugar de su clase padre React.Component.
+
+Ahora para conseguir que el trabajo, voy a envolver este JSX en un nodo padre,
+ sólo tenemos un único nodo que está siendo entregado por nuestro método de render.
+  Voy a crear una entrada aquí, y en su evento onChange, voy a llamar a this.update, 
+el método personalizado que creamos. Voy a seguir adelante y enlazar eso con un contexto de esto.
