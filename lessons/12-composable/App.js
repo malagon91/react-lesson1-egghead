@@ -1,5 +1,12 @@
-// https://jsbin.com/yiboxe/edit?js,output
-
+// Video 20
+// Write More Reusable React Components with Composable APIs
+//  To make more composable React components, you can define common APIs for similar component types.
+/**
+ * When creating React components one key tenet should be that your components should be reusable as well as 
+ * composable. Now here in our code view we've got the Slider component that we created in the refs video, 
+ * so hopefully you guys saw that, but basically we've got these Slider components that we can drag around and 
+ * they update their value.
+ */
 import React from 'react';
 import ReactDOM from 'react-dom';
 class App extends React.Component {
@@ -15,6 +22,13 @@ class App extends React.Component {
       red: ReactDOM.findDOMNode(this.refs.red.refs.inp).value
     })
   }
+
+  /**
+   * En este video se mandan llamar todas las opciones de un input dnetro de un componente de esta forma 
+   * tenemos un componente mas reusable que se puede llamar de muchas formas siempre y cuando mandemos los parametros
+   * correctos
+   * 
+   */
   render(){
     return (
       <div>
@@ -25,6 +39,15 @@ class App extends React.Component {
           step={0.01}
           val={+this.state.red}
           label="Red"
+          update={this.update} />
+          <NumInput
+          ref="red"
+          min={0}
+          max={255}
+          step={0.01}
+          val={+this.state.red}
+          label="Red"
+          type= "number"
           update={this.update} />
       </div>
     );

@@ -30,3 +30,9 @@ Ahora para conseguir que el trabajo, voy a envolver este JSX en un nodo padre,
  sólo tenemos un único nodo que está siendo entregado por nuestro método de render.
   Voy a crear una entrada aquí, y en su evento onChange, voy a llamar a this.update, 
 el método personalizado que creamos. Voy a seguir adelante y enlazar eso con un contexto de esto.
+
+
+Cuando se quiere crear un elemeton con JSx debo tomar en cuenta que cuando empiezan con mayuscula 
+son componentes que yo cree cuando son sin mayusc son elementos HTML 
+Div es un nuevo componente llamado Div 
+div es el elemento div de html 5

@@ -1,4 +1,5 @@
-// problematic in JsBin
+// Video 12
+//Manage React Component State with Lifecycle Methods
 
 import React from 'react';
 import ReactDOM from 'react-dom';
@@ -26,10 +27,12 @@ class App extends React.Component {
   }
   componentDidMount(){
     console.log('componentDidMount')
+    //whit whit option the method be call multiple times to app componet
     this.inc = setInterval(this.update,500)
   }
   componentWillUnmount(){
     console.log('componentWillUnmount');
+    //Set in Zero this. inc
     clearInterval(this.inc)
   }
 }
